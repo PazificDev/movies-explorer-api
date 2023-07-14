@@ -15,7 +15,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3001', 'https://localhost:3001', 'localhost:3001', 'https://diplomafilms.nomoreparties.sbs', 'http://diplomafilms.nomoreparties.sbs', 'diplomafilms.nomoreparties.sbs'],
+  origin: ['http://localhost:3000', 'https://localhost:3000', 'localhost:3000', 'https://diplomafilms.nomoreparties.sbs', 'http://diplomafilms.nomoreparties.sbs', 'diplomafilms.nomoreparties.sbs'],
   optionsSuccessStatus: 200,
   credentials: true,
 };
