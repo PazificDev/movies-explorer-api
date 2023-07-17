@@ -88,6 +88,8 @@ const patchUserInfo = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         return next(new BadRequestErr('Переданы неверные данные'));
+      } else if (err.code === 11000) {
+        return next(new AlreadyExistErr('Пользователь с данным email уже существует'));
       } else if (err instanceof mongoose.Error.DocumentNotFoundError) {
         return next(new NotFoundErr('Пользователь не найден'));
       } else {
